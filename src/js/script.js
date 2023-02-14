@@ -34,7 +34,7 @@ startScanning.addEventListener('click', () => {
             {
               fps: 20,
               qrbox: { width: 250, height: 100 },
-              facingMode: { exact: 'environment' },
+              facingMode: 'environment',
             },
             (decodedText) => {
               console.log(decodedText);
