@@ -32,8 +32,8 @@ startScanning.addEventListener('click', () => {
           .start(
             cameraId,
             {
-              fps: 10,
-              qrbox: { width: 250, height: 250 },
+              fps: 20,
+              qrbox: { width: 250, height: 100 },
               facingMode: { exact: 'environment' },
             },
             (decodedText) => {
