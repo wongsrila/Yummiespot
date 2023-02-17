@@ -19,7 +19,7 @@ startScanning.addEventListener('click', () => {
   Html5Qrcode.getCameras()
     .then((devices) => {
       if (devices && devices.length) {
-        var cameraId = devices[0].id;
+        const cameraId = devices[0].id;
         const html5QrCode = new Html5Qrcode('reader');
         html5QrCode
           .start(
