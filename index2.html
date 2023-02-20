@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.4/html5-qrcode.min.js"
+      type="text/javascript"
+      defer
+    ></script> -->
+    <!-- <script type="text/javascript" src="src/js/script.js" defer></script> -->
+    <script type="text/javascript" src="src/js/main.js" defer></script>
+    <link rel="stylesheet" href="/src/style/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col">
+        <div id="reader"></div>
+      </div>
+      <div class="col" style="padding: 30px">
+        <div id="result">Result goes here</div>
+      </div>
+      <button id="start-scanning">start scanning</button>
+      <button id="stop-scanning">Stop scanning</button>
+    </div>
+    <video autoplay="true" class="camera"></video>
+
+    <!-- <img id="img" src="src/images/qr-code.jpg" alt="" /> -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@undecaf/zbar-wasm@0.9.11/dist/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@undecaf/barcode-detector-polyfill@0.9.13/dist/index.js"></script>
+    <script>
+      try {
+        window['BarcodeDetector'].getSupportedFormats();
+      } catch {
+        window['BarcodeDetector'] =
+          barcodeDetectorPolyfill.BarcodeDetectorPolyfill;
+      }
+    </script> -->
+  </body>
+</html>

@@ -3,16 +3,11 @@ const stopScanning = document.querySelector('#stop-scanning');
 const startScanning = document.querySelector('#start-scanning');
 
 function dataInfo(data) {
-  // console.log(data);
   if (data.status === 0) {
-    // console.log('bestaat niet g');
     dataResult.innerHTML = 'bestaat niet swa';
   } else {
-    // console.log(data);
     dataResult.innerHTML = data.product.product_name;
   }
-  // console.log(data.status);
-  // dataResult.innerHTML = data.product.product_name;
 }
 
 startScanning.addEventListener('click', () => {
@@ -26,20 +21,18 @@ startScanning.addEventListener('click', () => {
             cameraId,
             {
               fps: 20,
-              qrbox: { width: 250, height: 250 },
+              qrbox: { width: 600, height: 400 },
               facingMode: 'environment',
             },
             (decodedText) => {
-              // console.log(decodedText);
               fetch(
                 `https://world.openfoodfacts.org/api/v0/product/${decodedText}.json`,
               )
                 .then((response) => response.json())
-                .then((data) => dataInfo(data));
-              // .catch((error) => {
-              //   // element.parentElement.innerHTML = `Error: ${error}`;
-              //   console.error('There was an error!', error);
-              // });
+                .then((data) => dataInfo(data))
+                .catch((error) => {
+                  console.error('There was an error!', error);
+                });
             },
             (errorMessage) => {
               // console.error(errorMessage);
